@@ -1,0 +1,8 @@
+WinActivate($CmdLine[1])
+Send("^s")
+ControlFocus("","","Edit1")
+WinWait("[CLASS:#32770]","",10)
+ControlSetText("","","Edit1",$CmdLine[2])
+Sleep(1000)
+ControlClick("","","Button1")
+Sleep(10000)
